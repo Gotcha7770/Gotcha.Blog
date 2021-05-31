@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import * as React from 'react'
 
 const Header = () => {
@@ -5,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <a href="/">Gotcha.Blog</a>
+        <Link to="/">Gotcha.Blog</Link>
       </div>
     </header>
   )
