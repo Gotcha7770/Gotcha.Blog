@@ -7,9 +7,9 @@ export default function IndexPage({ data }) {
   const { posts } = data.blog
 
   return (
-    <div>
+    <body>
       <Header />
-      <div>
+      <main>
         <h1>My blog posts</h1>
 
         {posts.map(post => (
@@ -23,9 +23,9 @@ export default function IndexPage({ data }) {
             <p>{post.excerpt}</p>
           </article>
         ))}
-      </div>
+      </main>
       <Footer />
-    </div>
+    </body>
   )
 }
 

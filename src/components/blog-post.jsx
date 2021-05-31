@@ -1,16 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Header from "../components/header"
+import Footer from "../components/footer"
 
 export default function BlogPost({ data }) {
-    const post = data.markdownRemark
+  const post = data.markdownRemark
 
-    return (
-        <div>
-            <h1>{post.frontmatter.title}</h1>
-            <small>{post.frontmatter.date}</small>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-    )
+  return (
+    <body>
+      <Header />
+      <main>
+        <h1>{post.frontmatter.title}</h1>
+        <small>{post.frontmatter.date}</small>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </main>
+      <Footer />
+    </body>
+  )
 }
 
 export const query = graphql`

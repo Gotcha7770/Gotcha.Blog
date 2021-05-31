@@ -2,9 +2,13 @@ import * as React from 'react'
 
 const Header = () => {
 
-    return (
-      <h1>Gotcha.Blog</h1>
-    )
-  }
+  return (
+    <header>
+      <div>
+        <a href="/">Gotcha.Blog</a>
+      </div>
+    </header>
+  )
+}
 
 export default Header
