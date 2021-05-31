@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Header from "../components/header"
-import Home from "../components/home"
 import Footer from "../components/footer"
 
 export default function IndexPage({ data }) {
@@ -15,7 +14,9 @@ export default function IndexPage({ data }) {
 
         {posts.map(post => (
           <article key={post.id}>
-            <h2>{post.frontmatter.title}</h2>
+            <Link to={post.fields.slug}>
+              <h2>{post.frontmatter.title}</h2>
+            </Link>
             <small>
               {post.frontmatter.author}, {post.frontmatter.date}
             </small>
@@ -32,6 +33,9 @@ export const pageQuery = graphql`
   query MyQuery {
     blog: allMarkdownRemark {
       posts: nodes {
+        fields {
+          slug
+        }
         frontmatter {
           date(fromNow: true)
           title
