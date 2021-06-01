@@ -7,7 +7,7 @@ export default function IndexPage({ data }) {
   const { posts } = data.blog
 
   return (
-    <body>
+    <div>
       <Header />
       <main>
         <h1>My blog posts</h1>
@@ -25,7 +25,7 @@ export default function IndexPage({ data }) {
         ))}
       </main>
       <Footer />
-    </body>
+    </div>
   )
 }
 

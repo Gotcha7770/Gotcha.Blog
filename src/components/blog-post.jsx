@@ -7,7 +7,7 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
 
   return (
-    <body>
+    <div>
       <Header />
       <main>
         <h1>{post.frontmatter.title}</h1>
@@ -15,7 +15,7 @@ export default function BlogPost({ data }) {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </main>
       <Footer />
-    </body>
+    </div>
   )
 }
 
