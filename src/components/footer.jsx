@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { wrapper } from './footer.module.css'
+import { container, wrapper } from './footer.module.css'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={container}>
       <div className={wrapper}>
         <div>
           <p>© 2021 by Gotcha. All rights reserved</p>

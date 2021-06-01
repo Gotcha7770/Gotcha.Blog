@@ -1,11 +1,11 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import { title, wrapper, home } from './header.module.css'
+import { container, wrapper, home } from './header.module.css'
 
 const Header = () => {
 
   return (
-    <header className={title}>
+    <header className={container}>
       <div className={wrapper}>
         <Link className={home} to="/">Gotcha.Blog</Link>
       </div>
