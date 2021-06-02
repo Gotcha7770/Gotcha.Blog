@@ -1,15 +1,17 @@
 import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import { container, wrapper } from './layout.module.css'
+import { container, pageContent } from './layout.module.css'
 
 const Layout = ({ children }) => {
 
     return (
         <div className={container}>
             <Header />
-            <main className={wrapper}>
-                {children}
+            <main className={pageContent}>
+                <div className="wrapper">
+                    {children}
+                </div>
             </main>
             <Footer />
         </div>

@@ -5,21 +5,6 @@
   position: relative;
 }
 
-.wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 30px;
-  padding-left: 30px;
-}
-
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .home {
   font-size: 26px;
   line-height: 54px;

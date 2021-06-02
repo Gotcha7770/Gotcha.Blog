@@ -1,0 +1,30 @@
+h3 {
+  font-size: 1rem;
+}
+
+a {
+  color: #2a7ae2;
+}
+
+a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+.post-title {
+  color: #2a7ae2;
+  font-size: 24px;
+}
+
+.post-title:hover {
+  color: #111;
+}
+
+.wrapper {
+  max-width: -webkit-calc(800px - (30px * 2));
+  max-width: calc(800px - (30px * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}

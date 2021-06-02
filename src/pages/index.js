@@ -1,19 +1,18 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import "../styles/index.css"
 
 export default function IndexPage({ data }) {
   const { posts } = data.blog
 
   return (
     <Layout>
-      <h2>Все записи</h2>
+      <div style={{ display: "block", marginBottom: "30px" }}></div>
       {posts.map(post => (
         <article key={post.id}>
           <small> {post.frontmatter.date} </small>
           <Link className="post-link" to={post.fields.slug}>
-            <h3 className="post-title">{post.frontmatter.title}</h3>
+            <p className="post-title">{post.frontmatter.title}</p>
           </Link>
           <p>{post.excerpt}</p>
         </article>
@@ -30,7 +29,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM d, yyyy")
+          date(formatString: "MMMM dd, yyyy")
           title
         }
         id

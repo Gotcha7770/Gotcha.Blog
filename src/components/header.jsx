@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <header className={container}>
-      <div className={wrapper}>
+      <div className="wrapper">
         <Link className={home} to="/">Gotcha.Blog</Link>
       </div>
     </header>
