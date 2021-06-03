@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /assets/post_titles/cmder_powerline.png
+image: cmder_powerline.png
 icon: 👨‍💻
 title: "Наводим красоту в Windows Terminal"
 date: 2020-05-05 17:13:00 +0300
@@ -126,12 +126,12 @@ categories: [devops, git]
 
 Если все сработало как надо, вместо довольно страшной командной строки должно было получиться что-то вроде этого:
 
-![example](/assets/post_pics/powerline-example.png)
+![example](powerline-example.png)
 
 Тут уже и в git поприятнее работать. Совсем горячие парни могут найти полезным
 [вот этот][6] репозиторий, и получить строку вида:
 
-![extra-example](/assets/post_pics/powerline-extra.png)
+![extra-example](powerline-extra.png)
 
 [1]: https://www.microsoft.com/ru-ru/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab
 [2]: https://cmder.net/

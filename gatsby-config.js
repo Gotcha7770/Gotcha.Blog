@@ -14,13 +14,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `blog`,
         path: `${__dirname}/src/blog/`,
       },
@@ -37,8 +30,17 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
-        plugins: [`gatsby-remark-prismjs`],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 680,
+            },
+          },
+          `gatsby-remark-prismjs`,
+        ],
       },
     },
+    `gatsby-plugin-sharp`,
   ],
 }
