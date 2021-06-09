@@ -1,6 +1,3 @@
-.post-header {
-}
-
 .hero-container {
   /* margin-left: calc(-100vw / 2 + 500px / 2);
   margin-right: calc(-100vw / 2 + 500px / 2); */
@@ -19,7 +16,7 @@
 
 .emoji-container {
   font-size: 78px;
-  margin-top: -60px;
+  margin-top: -40px;
   position: relative;
 }
 
@@ -28,11 +25,18 @@
   color: white;
 }
 
-.title-container {
+.title {
+  margin-top: 1.5rem;
 }
 
 .meta {
+  font-size: 90%;
+  color: #828282;
+  margin-bottom: 15px;
 }
 
-.date {
+.tag-span {
+  margin: 0px 3.5px;
+  padding: 3px 5px;
+  border-radius: 5px;
 }

@@ -1,10 +1,8 @@
 ---
-layout: post
 title: "Еще раз про Юнит тесты"
-image: /assets/post_titles/unit-tests.jpg
 icon: 🚦
 date: 2020-09-20 11:15:00 +0300
-categories: [dev, TDD]
+tags: [dev, TDD]
 ---
 
 ## Декомпозиция

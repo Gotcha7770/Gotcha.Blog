@@ -2,11 +2,16 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTags } from '@fortawesome/free-solid-svg-icons'
 import {
   heroContainer,
   hero,
   emojiContainer,
-  emoji
+  emoji,
+  title,
+  meta,
+  tagSpan
 } from "./blog-post.module.css"
 
 export default function BlogPost({ data }) {
@@ -24,8 +29,21 @@ export default function BlogPost({ data }) {
           {post.frontmatter.icon}
         </span>
       </div>
-      <h1>{post.frontmatter.title}</h1>
-      <small>{post.frontmatter.date}</small>
+      <h1 className={title}>
+        {post.frontmatter.title}
+      </h1>
+      <p className={meta}>
+        <time dateTime={post.frontmatter.date} itemProp="datePublished">
+          {post.frontmatter.date}
+        </time>
+      </p>
+      <div>
+        {/* <i className="fa fa-tags"></i> */}
+        <FontAwesomeIcon icon={faTags} />
+        {post.frontmatter.tags.map(tag => (
+          <span key={tag} className={tagSpan}>{tag}</span>
+        ))}
+      </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
@@ -39,6 +57,7 @@ export const query = graphql`
         icon
         title
         date(formatString: "MMMM DD, yyyy")
+        tags
       }
     }
     image: file(relativeDirectory: {eq: $pageName}, name: {eq: "hero"}) {
