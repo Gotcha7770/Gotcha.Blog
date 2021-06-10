@@ -32,3 +32,31 @@ a:hover {
 .fa-tags {
   color: #828282;
 }
+
+.orange-tag {
+  background-color: #e67e22;
+}
+
+.gray-tag {
+  background-color: #95a5a6;
+}
+
+.yellow-tag {
+  background-color: #f1c40f;
+}
+
+.red-tag {
+  background-color: #e74c3c;
+}
+
+.green-tag {
+  background-color: #1abc9c;
+}
+
+.purple-tag {
+  background-color: #9b59b6;
+}
+
+.blue-tag {
+  background-color: #2980b9;
+}

@@ -38,10 +38,11 @@ export default function BlogPost({ data }) {
         </time>
       </p>
       <div>
-        {/* <i className="fa fa-tags"></i> */}
         <FontAwesomeIcon icon={faTags} />
         {post.frontmatter.tags.map(tag => (
-          <span key={tag} className={tagSpan}>{tag}</span>
+          <span key={tag.id} className={`${tagSpan} ${tag.style}`} bgolor="red">
+            {tag.id}
+          </span>
         ))}
       </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -57,7 +58,10 @@ export const query = graphql`
         icon
         title
         date(formatString: "MMMM DD, yyyy")
-        tags
+        tags {
+          id
+          style
+        }
       }
     }
     image: file(relativeDirectory: {eq: $pageName}, name: {eq: "hero"}) {

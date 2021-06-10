@@ -11,6 +11,13 @@ module.exports = {
     description: "Еще один блог программиста",
   },
   plugins: [
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -56,4 +63,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,
   ],
+  mapping: {
+    "MarkdownRemark.frontmatter.tags": `TagsYaml`,
+  },
 }
