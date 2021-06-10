@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import * as React from 'react'
-import { container, wrapper, home } from './header.module.css'
+import { container, home } from './header.module.css'
 
 const Header = () => {
 

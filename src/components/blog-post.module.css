@@ -1,9 +1,4 @@
-.post-header {
-}
-
 .hero-container {
-  /* margin-left: calc(-100vw / 2 + 500px / 2);
-  margin-right: calc(-100vw / 2 + 500px / 2); */
   width: 100vw;
   position: relative;
   left: 50%;
@@ -28,11 +23,22 @@
   color: white;
 }
 
-.title-container {
+.post-header {
+  margin-bottom: 30px;
+}
+
+.title {
+  margin-top: 1.5rem;
 }
 
 .meta {
+  font-size: 90%;
+  color: #828282;
+  margin-bottom: 15px;
 }
 
-.date {
+.tag-span {
+  margin: 0px 3.5px;
+  padding: 3px 5px;
+  border-radius: 5px;
 }

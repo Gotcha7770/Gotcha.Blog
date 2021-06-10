@@ -1,0 +1,35 @@
+- id: devops
+  style: orange-tag
+
+- id: dev
+  style: gray-tag
+
+- id: git
+  style: red-tag
+
+- id: js
+  style: yellow-tag
+
+- id: C#
+  style: purple-tag
+
+- id: WPF
+  style: green-tag
+
+- id: VS Code
+  style: blue-tag
+
+- id: VisualStudio
+  style: purple-tag
+
+- id: design
+  style: blue-tag
+
+- id: node
+  style: green-tag
+
+- id: npm
+  style: red-tag
+
+- id: TDD
+  style: green-tag
