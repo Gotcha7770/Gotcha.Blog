@@ -1,6 +1,4 @@
 .hero-container {
-  /* margin-left: calc(-100vw / 2 + 500px / 2);
-  margin-right: calc(-100vw / 2 + 500px / 2); */
   width: 100vw;
   position: relative;
   left: 50%;
@@ -16,13 +14,17 @@
 
 .emoji-container {
   font-size: 78px;
-  margin-top: -40px;
+  margin-top: -60px;
   position: relative;
 }
 
 .emoji {
   line-height: 1em;
   color: white;
+}
+
+.post-header {
+  margin-bottom: 30px;
 }
 
 .title {

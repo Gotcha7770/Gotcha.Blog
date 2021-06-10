@@ -9,6 +9,7 @@ import {
   hero,
   emojiContainer,
   emoji,
+  postHeader,
   title,
   meta,
   tagSpan
@@ -29,21 +30,23 @@ export default function BlogPost({ data }) {
           {post.frontmatter.icon}
         </span>
       </div>
-      <h1 className={title}>
-        {post.frontmatter.title}
-      </h1>
-      <p className={meta}>
-        <time dateTime={post.frontmatter.date} itemProp="datePublished">
-          {post.frontmatter.date}
-        </time>
-      </p>
-      <div>
-        <FontAwesomeIcon icon={faTags} />
-        {post.frontmatter.tags.map(tag => (
-          <span key={tag.id} className={`${tagSpan} ${tag.style}`} bgolor="red">
-            {tag.id}
-          </span>
-        ))}
+      <div className={postHeader}>
+        <h1 className={title}>
+          {post.frontmatter.title}
+        </h1>
+        <p className={meta}>
+          <time dateTime={post.frontmatter.date} itemProp="datePublished">
+            {post.frontmatter.date}
+          </time>
+        </p>
+        <div>
+          <FontAwesomeIcon icon={faTags} />
+          {post.frontmatter.tags.map(tag => (
+            <span key={tag.id} className={`${tagSpan} ${tag.style}`} bgolor="red">
+              {tag.id}
+            </span>
+          ))}
+        </div>
       </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
