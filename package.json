@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^3.5.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
+    "gatsby-plugin-google-gtag": "^3.7.0",
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-sharp": "^3.6.0",
     "gatsby-plugin-typography": "^3.6.0",
