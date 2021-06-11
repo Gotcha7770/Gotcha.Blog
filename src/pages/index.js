@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 
 export default function IndexPage({ data }) {
@@ -7,6 +8,9 @@ export default function IndexPage({ data }) {
 
   return (
     <Layout>
+      <Helmet>
+        <meta property="og:url" content="/" />
+      </Helmet>
       <div style={{ display: "block", marginBottom: "30px" }}></div>
       {posts.map(post => (
         <article key={post.id}>
