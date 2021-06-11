@@ -24,6 +24,7 @@ export default function IndexPage({ data }) {
 export const pageQuery = graphql`
   query MyQuery {
     blog: allMarkdownRemark(
+      filter: { frontmatter: { draft: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       posts: nodes {
