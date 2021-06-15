@@ -8,9 +8,25 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Gotcha Blog",
-    description: "Еще один блог программиста",
+    description: "Очередной блог программиста",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gotcha.Blog`,
+        short_name: `Gotcha.Blog`,
+        description: `Очередной блог программиста`,
+        lang: `ru`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        //theme_color: `#ffffff`,
+        display: `standalone`,
+        icon: `src/images/Icon.png`,
+        include_favicon: true,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,

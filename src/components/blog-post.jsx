@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -22,6 +23,11 @@ export default function BlogPost({ data }) {
 
   return (
     <Layout>
+      <Helmet>
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:url" content={post.fields.slug} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <div className={heroContainer}>
         <GatsbyImage image={image} className={hero} alt="post title image" />
       </div>
@@ -57,6 +63,9 @@ export const query = graphql`
   query BlogQuery($slug: String!, $pageName: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        slug
+      }
       frontmatter {
         icon
         title
