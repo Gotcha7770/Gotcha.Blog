@@ -27,6 +27,13 @@ tags: [devops, git]
 через файл настроек в формате `json`. Плюс, разработчики обещают поддерживать и обновлять его,
 и добавлять различные удобства.
 
+## UPD:
+
+Старая инструкция устарела. Теперь можно просто скачать [PowerShell 7][7] (есть опция через 
+winget если позволяет версия системы). Потом идем на [сайт][8] и деалем все согласно инструкции.
+Максимальные сложности с которыми тут можно столкнуться - не забыть добавить команды инициализации модуля в свой профиль PowerShell.
+
+## [Obsolete]
 По умолчанию в терминале можно создавать экземпляры Командной строки, PowerShell
 и даже Azure Cloud Shell, но этим дело не ограничется, можно добавлять свои оболочки,
 например, мы добавим [Cmder][2] (произносится - Commander). Почему его?
@@ -137,3 +144,5 @@ tags: [devops, git]
 [4]: https://github.com/powerline/fonts
 [5]: https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58
 [6]: https://github.com/ryanoasis/powerline-extra-symbols
+[7]: https://docs.microsoft.com/ru-ru/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#msi
+[8]: https://ohmyposh.dev/docs/windows
