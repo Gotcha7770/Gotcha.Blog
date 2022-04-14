@@ -33,3 +33,6 @@
 
 - id: TDD
   style: green-tag
+
+- id: EF
+  style: purple-tag
