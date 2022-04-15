@@ -15,7 +15,7 @@ export default function IndexPage({ data }) {
       {posts.map(post => (
         <article key={post.id}>
           <small> {post.frontmatter.date} </small>
-          <Link className="post-link" to={post.fields.slug}>
+          <Link className="post-link" to={`/${post.parent.name}`}>
             <p className="post-title">{post.frontmatter.title}</p>
           </Link>
           <p>{post.excerpt}</p>
@@ -26,14 +26,16 @@ export default function IndexPage({ data }) {
 }
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query IndexQuery {
     blog: allMarkdownRemark(
       filter: { frontmatter: { draft: { ne: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       posts: nodes {
-        fields {
-          slug
+        parent {
+          ... on File {
+            name
+          }
         }
         frontmatter {
           date(formatString: "MMMM DD, yyyy")

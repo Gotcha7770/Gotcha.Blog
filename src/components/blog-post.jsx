@@ -20,12 +20,13 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
   console.log(data.image)
   const image = getImage(data.image)
+  const link = `/${post.parent.name}`
 
   return (
     <Layout>
       <Helmet>
         <meta property="og:title" content={post.frontmatter.title} />
-        <meta property="og:url" content={post.fields.slug} />
+        <meta property="og:url" content={link} />
         <meta property="og:type" content="article" />
       </Helmet>
       <div className={heroContainer}>
@@ -60,12 +61,9 @@ export default function BlogPost({ data }) {
 }
 
 export const query = graphql`
-  query BlogQuery($slug: String!, $pageName: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query BlogQuery($parentId: String!, $parentDirectory: String!) {
+    markdownRemark(parent: { id: { eq: $parentId } }) {
       html
-      fields {
-        slug
-      }
       frontmatter {
         icon
         title
@@ -75,8 +73,13 @@ export const query = graphql`
           style
         }
       }
+      parent {
+        ... on File {
+          name
+        }
+      }
     }
-    image: file(relativeDirectory: {eq: $pageName}, name: {eq: "hero"}) {
+    image: file(relativeDirectory: {eq: $parentDirectory}, name: {eq: "hero"}) {
       childImageSharp {
         gatsbyImageData(layout: CONSTRAINED)
       }
