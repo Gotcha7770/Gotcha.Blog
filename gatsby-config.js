@@ -96,6 +96,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `gotcha-blog`
+      }
+    },
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-fontawesome-css`,

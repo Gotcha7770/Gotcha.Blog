@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTags } from '@fortawesome/free-solid-svg-icons'
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import {
   heroContainer,
   hero,
@@ -16,17 +17,21 @@ import {
   tagSpan
 } from "./blog-post.module.css"
 
-export default function BlogPost({ data }) {
+export default function BlogPost({ location, data }) {
   const post = data.markdownRemark
-  console.log(data.image)
   const image = getImage(data.image)
-  const link = `/${post.parent.name}`
+  const disqusConfig = {
+    url: location.href,
+    identifier: post.id,
+    title: post.title,
+  }
 
+  console.log(location)
   return (
     <Layout>
       <Helmet>
         <meta property="og:title" content={post.frontmatter.title} />
-        <meta property="og:url" content={link} />
+        <meta property="og:url" content={location.pathname} />
         <meta property="og:type" content="article" />
       </Helmet>
       <div className={heroContainer}>
@@ -56,6 +61,7 @@ export default function BlogPost({ data }) {
         </div>
       </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Disqus config={disqusConfig} />
     </Layout>
   )
 }
@@ -71,11 +77,6 @@ export const query = graphql`
         tags {
           id
           style
-        }
-      }
-      parent {
-        ... on File {
-          name
         }
       }
     }
