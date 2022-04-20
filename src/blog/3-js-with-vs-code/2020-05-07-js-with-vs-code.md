@@ -2,7 +2,7 @@
 title: "Работа на языке JavaScript в Visual Studio Code"
 icon: 👨‍🏭
 date: 2020-05-07 14:39:21 +0300
-tags: [dev, js, VS Code]
+tags: [dev, JS, VS Code]
 ---
 
 ## At the very beginning

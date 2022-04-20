@@ -38,30 +38,68 @@ a:hover {
   color: #828282;
 }
 
-.orange-tag {
-  background-color: #e67e22;
-}
+/* Tag colors have got from https://flatuicolors.com/palette/defo */
 
-.gray-tag {
-  background-color: #95a5a6;
-}
-
-.yellow-tag {
-  background-color: #f1c40f;
-}
-
-.red-tag {
-  background-color: #e74c3c;
-}
-
-.green-tag {
+.torquoise-tag {
   background-color: #1abc9c;
 }
 
-.purple-tag {
+.green-sea-tag {
+  background-color: #16a085;
+}
+
+.sun-flower-tag {
+  background-color: #f1c40f;
+}
+
+.orange-tag {
+  background-color: #f39c12;
+}
+
+.emerald-tag {
+  background-color: #2ecc71;
+}
+
+.nephritis-tag {
+  background-color: #27ae60;
+}
+
+.carrot-tag {
+  background-color: #e67e22;
+}
+
+.pumkin-tag {
+  background-color: #d35400;
+}
+
+.peter-river-tag {
+  background-color: #3498db;
+}
+
+.belize-hole-tag {
+  background-color: #2980b9;
+}
+
+.alizarin-tag {
+  background-color: #e74c3c;
+}
+
+.pomegranate-tag {
+  background-color: #c0392b;
+}
+
+.amethyst-tag {
   background-color: #9b59b6;
 }
 
-.blue-tag {
-  background-color: #2980b9;
+.wisteria-tag {
+  background-color: #8e44ad;
+}
+
+.wet-asphalt-tag {
+  background-color: #34495e;
+}
+
+.concrete-tag {
+  background-color: #95a5a6;
 }

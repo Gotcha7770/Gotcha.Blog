@@ -2,37 +2,43 @@
   style: orange-tag
 
 - id: dev
-  style: gray-tag
+  style: concrete-tag
 
 - id: git
-  style: red-tag
+  style: pomegranate-tag
 
-- id: js
-  style: yellow-tag
+- id: JS
+  style: sun-flower-tag
 
 - id: C#
-  style: purple-tag
+  style: amethyst-tag
 
 - id: WPF
-  style: green-tag
+  style: green-sea-tag
 
 - id: VS Code
-  style: blue-tag
+  style: belize-hole-tag
 
 - id: VisualStudio
-  style: purple-tag
+  style: amethyst-tag
 
 - id: design
-  style: blue-tag
+  style: belize-hole-tag
 
 - id: node
-  style: green-tag
+  style: green-sea-tag
 
 - id: npm
-  style: red-tag
+  style: pomegranate-tag
 
 - id: TDD
-  style: green-tag
+  style: green-sea-tag
 
 - id: EF
-  style: purple-tag
+  style: amethyst-tag
+
+- id: Agile
+  style: carrot-tag
+
+- id: F#
+  style: peter-river-tag
