@@ -274,3 +274,11 @@ pre[class*="language-"] > code[class*="language-"] {
 	box-shadow: inset 5px 0 0 #f7d87c;
 	z-index: 0;
 }
+
+.gatsby-highlight-code-line {
+	background: #191C40;
+	display: block;
+	z-index: 0;
+	margin-left: -1em;
+	margin-right: -1em;
+}
