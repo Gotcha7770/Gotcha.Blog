@@ -42,3 +42,6 @@
 
 - id: F#
   style: peter-river-tag
+
+- id: PostgreSQL
+  style: peter-river-tag
