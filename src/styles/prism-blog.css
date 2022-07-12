@@ -282,3 +282,7 @@ pre[class*="language-"] > code[class*="language-"] {
 	margin-left: -1em;
 	margin-right: -1em;
 }
+
+div.gatsby-highlight {
+	margin-bottom: 1.5rem;
+}
