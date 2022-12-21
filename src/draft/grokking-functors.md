@@ -226,7 +226,7 @@ let map f x =
 ```F#
 let rec map f x =
     match x with
-    | y:ys -> f y :: map f ys
+    | head:tail -> f head :: map f tail
     | [] -> []
 ```
 
