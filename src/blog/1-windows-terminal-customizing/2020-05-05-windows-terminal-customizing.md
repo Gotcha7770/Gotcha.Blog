@@ -145,4 +145,4 @@ winget если позволяет версия системы). Потом ид
 [5]: https://medium.com/@slmeng/how-to-install-powerline-fonts-in-windows-b2eedecace58
 [6]: https://github.com/ryanoasis/powerline-extra-symbols
 [7]: https://docs.microsoft.com/ru-ru/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.2#msi
-[8]: https://ohmyposh.dev/docs/windows
+[8]: https://ohmyposh.dev/docs/installation/windows
