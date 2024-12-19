@@ -1,3 +1,9 @@
+0. Удаляем закешированный ключ, если нужно
+
+```ssh
+ssh-keygen -R 192.168.1.123
+```
+
 1. SSH по паролю если нет сертификата
 
 ```shell
@@ -98,7 +104,7 @@ pki --gen --type rsa --size 4096 --outform pem > private/ca-key.pem
 
 ```shell
 pki --self --ca --lifetime 3650 --in private/ca-key.pem \
-    --type rsa --dn "CN=77.91.100.34" --outform pem > cacerts/ca-cert.pem
+    --type rsa --dn "CN=45.87.154.212" --outform pem > cacerts/ca-cert.pem
 ```
 
 7. Генерирование сертификата для сервера VPN
@@ -110,7 +116,7 @@ pki --pub --in private/server-key.pem --type rsa \
     | pki --issue --lifetime 1825 \
         --cacert cacerts/ca-cert.pem \
         --cakey private/ca-key.pem \
-        --dn "CN=77.91.100.34" --san dns:77.91.100.34 --san 77.91.100.34 \
+        --dn "CN=45.87.154.212" --san dns:45.87.154.212 --san 45.87.154.212 \
         --flag serverAuth --flag ikeIntermediate --outform pem \
     >  certs/server-cert.pem
 ```
@@ -149,7 +155,7 @@ conn ikev2-vpn
     rekey=no
 
     left=%any
-    leftid=77.91.100.34
+    leftid=45.87.154.212
     leftcert=server-cert.pem
     leftsendcert=always
     leftsubnet=0.0.0.0/0
@@ -208,6 +214,14 @@ net.ipv4.ip_no_pmtu_disc = 1
 
 ```shell
 sysctl -p
+```
+
+11. Настроим firewall
+
+```shell
+sudo ufw allow OpenSSH
+sudo ufw enable
+sudo ufw allow 500,4500/udp
 ```
 
 11. Настроим iptables
@@ -320,5 +334,3 @@ https://docs.strongswan.org/docs/5.9/support/faq.html#_no_private_key_found
 https://docs.strongswan.org/docs/5.9/interop/windowsClients.html#_using_passwords_with_eap_mschapv2
 https://www.digitalocean.com/community/tutorials/how-to-set-up-an-ikev2-vpn-server-with-strongswan-on-ubuntu-22-04
 https://superuser.com/questions/1717733/strongswan-ikev2-vpn-server-ubuntu-22-04-lts-network-connection-between-your-c
-
-9m6YzuUiZ6G
